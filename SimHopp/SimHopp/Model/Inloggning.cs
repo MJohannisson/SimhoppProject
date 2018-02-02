@@ -28,7 +28,7 @@ namespace SimHopp
             string[] Lines = File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "Login.txt"));
             foreach (string line in Lines)
             {
-                string[] splitted = line.Split(new[] { " " }, StringSplitOptions.None);
+                string[] splitted = line.Split(new[] {" "}, StringSplitOptions.None);
                 Valid_Users.Add(new User(splitted[0], splitted[1]));
 
             }
