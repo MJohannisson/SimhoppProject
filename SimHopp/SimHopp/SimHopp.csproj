@@ -51,6 +51,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Deltagare.cs" />
+    <Compile Include="Model\Domare.cs" />
+    <Compile Include="Model\Hopp.cs" />
+    <Compile Include="Model\Inloggning.cs" />
+    <Compile Include="Model\Poang.cs" />
+    <Compile Include="Model\Statistik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
