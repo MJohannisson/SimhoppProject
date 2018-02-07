@@ -30,7 +30,6 @@ namespace SimHopp
             {
                 string[] splitted = line.Split(new[] {" "}, StringSplitOptions.None);
                 Valid_Users.Add(new User(splitted[0], splitted[1]));
-
             }
             foreach (User u in Valid_Users)
             {
@@ -59,6 +58,7 @@ namespace SimHopp
                         running = false;
                     }
                 }
+                Console.WriteLine("You have " + tries + " tries left.");
                 tries = tries - 1;
             }
             if (match)
@@ -72,4 +72,3 @@ namespace SimHopp
         }
     }
 }
-
