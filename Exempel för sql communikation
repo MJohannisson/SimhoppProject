@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Text;
+
+namespace SimHopp
+{
+    static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            try
+            {
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                builder.DataSource = "simhoppdb.database.windows.net";
+                builder.UserID = "SimHopp";
+                builder.Password = "10helluworlD";
+                builder.InitialCatalog = "SIMHOPP";
+
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    StringBuilder sb = new StringBuilder();
+                    //sb.Append("SELECT TOP 1 p.LoginName as LoginName, p.PWord as Password ");
+                    sb.Append("SELECT * FROM [LoginProfile] p ");
+                    
+                    //sb.Append("ALTER TABLE Persons");
+                    //sb.Append("ADD PersonID int32 NOT NULL Default 2");
+                    //sb.Append("ADD LastName varchar(255) NULL 'Mrrrra'");
+                    //sb.Append("ADD FirstName varchar(255) NULL 'Orb'");
+                    //sb.Append("ADD Address varchar(255) NULL 'Slottsgatan'");
+                    //sb.Append("ADD City varchar(255) NULL 'Sthlm'");
+                    //sb.Append("ADD DateOfBirth varchar(255) NULL '1992-10-05'");
+                    String sql = sb.ToString();
+                    //string cmdString = "INSERT INTO Persons (PersonID,LastName,FirstName,Address,City,DateOfBirth) VALUES (@val1, @val2, @val3, @val4, @val5, @val6)";
+
+                    using (SqlCommand command = new SqlCommand(/*cmdString*/sql, connection))
+                    {
+                        //command.CommandText = sql;
+                        //command.CommandText = cmdString;
+                        //command.Parameters.AddWithValue("@val1", 3);
+                        //command.Parameters.AddWithValue("@val2", "kogkorak");
+                        //command.Parameters.AddWithValue("@val3", "aoejgrnaeorgna");
+                        //command.Parameters.AddWithValue("@val4", "oraba");
+                        //command.Parameters.AddWithValue("@val5", "gaipegroia");
+                        //command.Parameters.AddWithValue("@val6", "1999-05-24");
+                        //command.CommandType = System.Data.CommandType.Text;
+                        //command.ExecuteNonQuery();
+                        //SqlDataReader r = command.ExecuteReader();
+                        //r = command.ExecuteReader();
+                        //using (SqlDataReader r = command.ExecuteReader())
+                        //{
+                        //    r = command.ExecuteReader();
+                        //}
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Console.WriteLine("{0} {1} {2}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                                //Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1) /*reader.GetString(0), reader.GetString(1)*/);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            Console.ReadLine();
+
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new Form1());
+        }
+    }
+}
