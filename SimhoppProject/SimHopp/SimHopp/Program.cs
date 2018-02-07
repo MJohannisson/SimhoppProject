@@ -12,9 +12,14 @@ namespace SimHopp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Model.Db test = new Model.Db();
+            //test.LoginDB();
+            Model.Inloggning Inlogg = new Model.Inloggning();
+            Inlogg.Write();
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
+            Console.ReadKey();
         }
     }
 }

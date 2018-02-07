@@ -7,9 +7,25 @@ using System.Data.SqlClient;
 
 namespace SimHopp.Model
 {
+    public struct User
+    {
+        public int userID;
+        public string Username;
+        public string Password;
+
+        public User(int userID, string Username, string Password)
+        {
+            this.userID = userID;
+            this.Username = Username;
+            this.Password = Password;
+        }
+    }
     class Db
     {
-        void loginDB()
+        
+        List<User> Valid_User = new List<User>();
+        //public void LoginDB()
+        public List<User> LoginDB()
         {
             try
             {
@@ -31,18 +47,26 @@ namespace SimHopp.Model
                         {
                             while (reader.Read())
                             {
+                                User new_User = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                                Valid_User.Add(new_User);
 
+
+                                //Console.WriteLine("{0} {1} {2}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
                             }
                         }
 
                     }
+                    //foreach(User u in Valid_User)
+                    //{
+                    //    Console.WriteLine(u.userID + " " + u.Username + " " + u.Password);
+                    //}
                 }
             }
             catch(SqlException e)
             {
                 Console.WriteLine(e.ToString());
             }
-
+            return this.Valid_User;
         }
     }
 }

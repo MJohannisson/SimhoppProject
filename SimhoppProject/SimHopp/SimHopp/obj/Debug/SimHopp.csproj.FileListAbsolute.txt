@@ -1,0 +1,11 @@
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\bin\Debug\SimHopp.exe.config
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\bin\Debug\SimHopp.exe
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\bin\Debug\SimHopp.pdb
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\obj\Debug\SimHopp.csprojResolveAssemblyReference.cache
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\obj\Debug\SimHopp.Properties.Resources.resources
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\obj\Debug\SimHopp.View.ViewLogin.resources
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\obj\Debug\SimHopp.csproj.GenerateResource.Cache
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\obj\Debug\SimHopp.csproj.CoreCompileInputs.cache
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\obj\Debug\SimHopp.exe
+C:\Users\Misha\Documents\GitHub\SimhoppProject\SimHopp\SimHopp\obj\Debug\SimHopp.pdb
