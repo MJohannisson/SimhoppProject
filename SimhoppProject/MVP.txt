@@ -1,0 +1,8 @@
+What is Model?
+Model is a domain level or business level object. A model accomodates application data and provides behaviours to systematically access it. It should be independent, it should not have any association with user interface issues. So we can reuse the same model for different type of UI level applications.
+
+What is View?
+A View is a windowpane for showing the model data or elements to the application users. Model does not have direct link to the views. View know about thier Models, but not the other way around.
+
+What is Presenter?
+Presenter will address the user input and use this to manipulate the model data. View will pass the user input actions to the Presenter for interpretation. Presenter will act on the received data from View and communicate with Model and produce results to the View.
